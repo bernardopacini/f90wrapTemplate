@@ -1,0 +1,26 @@
+#==============================================================================
+# Compiler Rules
+#==============================================================================
+%.o : %.f90
+	$(FF90) $(FF90_ALL_FLAGS) -c $< -o $*.o
+	@echo
+	@echo "--------------- Fortran compiled $*.f90 successfully ---------------"
+	@echo
+
+%.o: %.f
+	$(FF90) $(FF90_ALL_FLAGS) -c $< -o $*.o
+	@echo
+	@echo "--------------- Fortran compiled $*.f successfully ---------------"
+	@echo
+
+%.fpp : %.f90
+	$(FPP) $(FPP_F90FLAGS) $<  -o $*.fpp
+	@echo
+	@echo "--------------- FPP compiled $*.f90 successfully ---------------"
+	@echo
+
+%.o : %.c
+	$(CC) $(CC_ALL_FLAGS) -c $< -o $*.o
+	@echo
+	@echo "--------------- C compiled $*.f90 successfully ---------------"
+	@echo

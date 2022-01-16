@@ -1,0 +1,63 @@
+# Build Files
+build/*
+*config/config.mk
+*.mod
+*.stamp
+*.build
+*.o
+*.a
+*.fpp
+
+# Python Package Files
+*.pyc
+*.d
+*.c
+*.h
+*.so
+*helix_pyf90*
+*.egg-info*
+*.ipynb_checkpoints
+*__pycache__*
+
+# Sphinx Documentation Files
+*docs/sphinx/build/*
+*docs/sphinx/source/_build/*
+*docs/sphinx/source/_static/*
+*docs/sphinx/source/_templates/*
+*docs/sphinx/source/.vscode/*
+*docs/sphinx/source/developer_docs/Fortran*
+
+# Doxygen Documentation
+*docs/doxygen/build/*
+
+# Wrapping Files
+*f90wrap*
+*.depend
+*.f2py_f2cmap
+
+# Complexified Files
+!src_cs
+src_cs/*
+src_cs/build/*
+!src_cs/complexify.py
+!src_cs/mod_complexify.f90
+!src_cs/build
+!src_cs/build/Makefile
+!src_cs/build/kind_map
+!src_cs/build/rules
+
+# AD Temporary Directories
+src/adjoint/tempForward/*
+src/adjoint/tempReverse/*
+
+# Misc Files
+*.vscode*
+*Other/
+!*adStack.c
+*.html
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.tikz

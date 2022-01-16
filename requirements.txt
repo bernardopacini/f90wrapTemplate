@@ -1,0 +1,9 @@
+numpy
+git+https://github.com/jameskermode/f90wrap
+fortdepend
+sphinx
+sphinx-prompt
+autoapi
+sphinxcontrib-bibtex
+git+https://github.com/VACUMM/sphinx-fortran
+testflo
