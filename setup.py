@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 # Real Package
-# packages = ["helix", "helix_pyf90"]
+# packages = ["f90wrapTemplate", "f90wrapTemplate_pyf90"]
 
 # Real + Complex Package
 packages = ["f90wrapTemplate", "f90wrapTemplate_cs", "f90wrapTemplate_pyf90", "f90wrapTemplate_pyf90_cs"]

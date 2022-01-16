@@ -13,5 +13,5 @@ exclude =
     *__init__.py
     *setup.py
     # Ignore auto-generated python libraries
-    python_src/helix_pyf90/*
-    python_src/helix_pyf90_complex/*
+    python_src/f90wrapTemplate_pyf90/*
+    python_src/f90wrapTemplate_pyf90_cs/*

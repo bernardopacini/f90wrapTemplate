@@ -1,4 +1,4 @@
-# Master makefile for HELIX. The actual makefile you want is:
+# Master makefile for f90wrapTemplate. The actual makefile you want is:
 # src/build/Makefile (or src_cs/build/makefile for complex build)
 
 default:
@@ -66,6 +66,6 @@ clean:
 	rm -f -r ./python_src/f90wrapTemplate_pyf90
 	rm -f -r ./python_src/f90wrapTemplate_pyf90_cs
 	rm -f ./python_src/_f90wrapTemplate_pyf90*
-	rm -f ./python_src/_f90wrapTemplate_pyf90_complex*
+	rm -f ./python_src/_f90wrapTemplate_pyf90_cs*
 	rm -f -r ./build/bin
 	make clean_build
