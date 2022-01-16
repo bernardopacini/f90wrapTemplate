@@ -76,12 +76,7 @@ fortran_ext = ["f90", "F90", "f95", "F95"]
 # have an extension matching those define by the config variable `fortran_ext`
 # are used.
 src = "../../../src/"
-fortran_src = [
-    os.path.abspath(os.path.join(this_dir, src + path))
-    for path in (
-        "",
-    )
-]
+fortran_src = [os.path.abspath(os.path.join(this_dir, src + path)) for path in ("",)]
 
 # Indentation string or length (default 4). If it is an integer,
 # indicates the number of spaces.

@@ -1,6 +1,6 @@
 __author__ = "Bernardo Pacini"
 __email__ = "bpacini@umich.edu"
-__date__ = "Sept. 17th, 2021 Fri"
+__date__ = "Jan. 16th, 2021 Sun"
 
 import os
 import shutil
@@ -16,7 +16,7 @@ src = "../../../src/"
 srcExt = ["f90"]
 
 # Directories to Ignore
-srcIgnore = ["build", "tempForward", "tempReverse", "ADFirstAidKit"]
+srcIgnore = ["build", "forward", "tempForward", "reverse", "tempReverse", "ADFirstAidKit"]
 
 # Regular Expressions
 # fmt: off
@@ -29,6 +29,7 @@ def generateDoc():
     # If documentation exists, delete it and remake directory
     if os.path.exists(docPath):
         shutil.rmtree(docPath)
+    os.makedirs(docPath)
 
     # Traverse source directory
     for root, dirs, files in os.walk(src):
