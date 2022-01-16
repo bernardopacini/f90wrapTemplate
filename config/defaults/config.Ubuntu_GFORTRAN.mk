@@ -28,3 +28,6 @@ PYTHON = python3
 
 # Script to generate the dependencies
 MAKEDEPEND = fortdepend
+
+# ----- Tapenade --------------------------------------------------------------
+tapenade = /path/to/tapenade

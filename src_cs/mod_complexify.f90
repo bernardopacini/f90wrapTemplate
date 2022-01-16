@@ -1,15 +1,6 @@
 !> Module for complex overloading
 module MOD_COMPLEXIFY
 !!===========================================================================!!
-!! Includes
-!!===========================================================================!!
-use MOD_SETTINGS, only: &
-  wp
-
-use MOD_HANDLING, only: &
-  error
-
-!!===========================================================================!!
 implicit none
 !!===========================================================================!!
 public :: &
@@ -87,8 +78,8 @@ contains
 logical function ge_rc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'ge_rc'
 
-  real(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  real(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (val1 .ge. real(val2)) then
     ge_rc = .True.
@@ -100,8 +91,8 @@ end function ge_rc
 logical function ge_cr(val1,val2)
   character(len=*),parameter :: this_sub_name = 'ge_cr'
 
-  complex(wp),intent(in) :: val1
-  real(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  real(8),intent(in) :: val2
 
   if (real(val1) .ge. val2) then
     ge_cr = .True.
@@ -113,8 +104,8 @@ end function ge_cr
 logical function ge_cc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'ge_cc'
 
-  complex(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (real(val1) .ge. real(val2)) then
     ge_cc = .True.
@@ -126,7 +117,7 @@ end function ge_cc
 logical function ge_ci(val1,val2)
   character(len=*),parameter :: this_sub_name = 'ge_ci'
 
-  complex(wp),intent(in) :: val1
+  complex(8),intent(in) :: val1
   integer,intent(in) :: val2
 
   if (real(val1) .ge. val2) then
@@ -140,7 +131,7 @@ logical function ge_ic(val1,val2)
   character(len=*),parameter :: this_sub_name = 'ge_ic'
 
   integer,intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val2
 
   if (val1 .ge. real(val2)) then
     ge_ic = .True.
@@ -152,8 +143,8 @@ end function ge_ic
 logical function gt_rc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'gt_rc'
 
-  real(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  real(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (val1 .gt. real(val2)) then
     gt_rc = .True.
@@ -165,8 +156,8 @@ end function gt_rc
 logical function gt_cr(val1,val2)
   character(len=*),parameter :: this_sub_name = 'gt_cr'
 
-  complex(wp),intent(in) :: val1
-  real(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  real(8),intent(in) :: val2
 
   if (real(val1) .gt. val2) then
     gt_cr = .True.
@@ -178,8 +169,8 @@ end function gt_cr
 logical function gt_cc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'gt_cc'
 
-  complex(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (real(val1) .gt. real(val2)) then
     gt_cc = .True.
@@ -191,7 +182,7 @@ end function gt_cc
 logical function gt_ci(val1,val2)
   character(len=*),parameter :: this_sub_name = 'gt_ci'
 
-  complex(wp),intent(in) :: val1
+  complex(8),intent(in) :: val1
   integer,intent(in) :: val2
 
   if (real(val1) .gt. val2) then
@@ -205,7 +196,7 @@ logical function gt_ic(val1,val2)
   character(len=*),parameter :: this_sub_name = 'gt_ic'
 
   integer,intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val2
 
   if (val1 .gt. real(val2)) then
     gt_ic = .True.
@@ -217,8 +208,8 @@ end function gt_ic
 logical function le_rc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'le_rc'
 
-  real(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  real(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (val1 .le. real(val2)) then
     le_rc = .True.
@@ -230,8 +221,8 @@ end function le_rc
 logical function le_cr(val1,val2)
   character(len=*),parameter :: this_sub_name = 'le_cr'
 
-  complex(wp),intent(in) :: val1
-  real(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  real(8),intent(in) :: val2
 
   if (real(val1) .le. val2) then
     le_cr = .True.
@@ -243,8 +234,8 @@ end function le_cr
 logical function le_cc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'le_cc'
 
-  complex(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (real(val1) .le. real(val2)) then
     le_cc = .True.
@@ -256,7 +247,7 @@ end function le_cc
 logical function le_ci(val1,val2)
   character(len=*),parameter :: this_sub_name = 'le_ci'
 
-  complex(wp),intent(in) :: val1
+  complex(8),intent(in) :: val1
   integer,intent(in) :: val2
 
   if (real(val1) .le. val2) then
@@ -270,7 +261,7 @@ logical function le_ic(val1,val2)
   character(len=*),parameter :: this_sub_name = 'le_ic'
 
   integer,intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val2
 
   if (val1 .le. real(val2)) then
     le_ic = .True.
@@ -282,8 +273,8 @@ end function le_ic
 logical function lt_rc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'lt_rc'
 
-  real(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  real(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (val1 .lt. real(val2)) then
     lt_rc = .True.
@@ -295,8 +286,8 @@ end function lt_rc
 logical function lt_cr(val1,val2)
   character(len=*),parameter :: this_sub_name = 'lt_cr'
 
-  complex(wp),intent(in) :: val1
-  real(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  real(8),intent(in) :: val2
 
   if (real(val1) .lt. val2) then
     lt_cr = .True.
@@ -308,8 +299,8 @@ end function lt_cr
 logical function lt_cc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'lt_cc'
 
-  complex(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
   if (real(val1) .lt. real(val2)) then
     lt_cc = .True.
@@ -321,7 +312,7 @@ end function lt_cc
 logical function lt_ci(val1,val2)
   character(len=*),parameter :: this_sub_name = 'lt_ci'
 
-  complex(wp),intent(in) :: val1
+  complex(8),intent(in) :: val1
   integer,intent(in) :: val2
 
   if (real(val1) .lt. val2) then
@@ -335,7 +326,7 @@ logical function lt_ic(val1,val2)
   character(len=*),parameter :: this_sub_name = 'lt_ic'
 
   integer,intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val2
 
   if (val1 .lt. real(val2)) then
     lt_ic = .True.
@@ -347,10 +338,10 @@ end function lt_ic
 function sign_rc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'sign_rc'
 
-  real(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  real(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
-  real(wp) :: sign_rc
+  real(8) :: sign_rc
 
   sign_rc = sign(val1,real(val2))
 end function sign_rc
@@ -358,12 +349,12 @@ end function sign_rc
 function norm2_c(val)
   character(len=*),parameter :: this_sub_name = 'norm2'
 
-  complex(wp),dimension(:),intent(in) :: val
+  complex(8),dimension(:),intent(in) :: val
 
-  real(wp) :: norm_real
-  real(wp) :: norm_complex
+  real(8) :: norm_real
+  real(8) :: norm_complex
 
-  real(wp) :: norm2_c
+  real(8) :: norm2_c
 
   norm_real = norm2(real(val))
   norm_complex = norm2(aimag(val))
@@ -374,15 +365,15 @@ end function norm2_c
 function atan2_cc(val1,val2)
   character(len=*),parameter :: this_sub_name = 'atan2_cc'
 
-  complex(wp),intent(in) :: val1
-  complex(wp),intent(in) :: val2
+  complex(8),intent(in) :: val1
+  complex(8),intent(in) :: val2
 
-  complex(wp) :: atan2_cc
+  complex(8) :: atan2_cc
 
-  real(wp) :: r1
-  real(wp) :: c1
-  real(wp) :: r2
-  real(wp) :: c2
+  real(8) :: r1
+  real(8) :: c1
+  real(8) :: r2
+  real(8) :: c2
 
   r1 = real(val1)
   c1 = aimag(val1)
@@ -390,21 +381,21 @@ function atan2_cc(val1,val2)
   c2 = aimag(val2)
 
   if ((r1 .ne. 0) .or. (r2 .ne. 0)) then
-    atan2_cc = cmplx(atan2(r1,r2),(r2*c1-r1*c2)/(r1**2+r2**2),wp)
+    atan2_cc = cmplx(atan2(r1,r2),(r2*c1-r1*c2)/(r1**2+r2**2),8)
   else
-    atan2_cc = cmplx(atan2(r1,r2),0.0,wp)
+    atan2_cc = cmplx(atan2(r1,r2),0.0,8)
   endif
 end function atan2_cc
 
 function abs_c(val)
   character(len=*),parameter :: this_sub_name = 'abs_c'
 
-  complex(wp),intent(in) :: val
+  complex(8),intent(in) :: val
 
-  complex(wp) :: abs_c
+  complex(8) :: abs_c
 
   if (real(val) .lt. 0) then
-    abs_c = cmplx(-real(val),-aimag(val),wp)
+    abs_c = cmplx(-real(val),-aimag(val),8)
   else
     abs_c = val
   endif
@@ -414,10 +405,10 @@ end function abs_c
 function dot_product_c(val1,val2)
   character(len=*),parameter :: this_sub_name = 'dot_product_c'
 
-  complex(wp),dimension(:),intent(in) :: val1
-  complex(wp),dimension(:),intent(in) :: val2
+  complex(8),dimension(:),intent(in) :: val1
+  complex(8),dimension(:),intent(in) :: val2
 
-  complex(wp) :: dot_product_c
+  complex(8) :: dot_product_c
 
   integer :: N_elem_1
   integer :: N_elem_2
@@ -428,22 +419,18 @@ function dot_product_c(val1,val2)
 
   dot_product_c = 0
 
-  if (N_elem_1 .ne. N_elem_2) then
-    call error(this_sub_name,this_mod_name,'arrays not same length')
-  else
-    do iElem = 1,N_elem_1
-      dot_product_c = dot_product_c + val1(iElem)*val2(iElem)
-    enddo
-  endif
+  do iElem = 1,N_elem_1
+    dot_product_c = dot_product_c + val1(iElem)*val2(iElem)
+  enddo
 end function dot_product_c
 
 function log10_c(val)
   character(len=*),parameter :: this_sub_name = 'log10_c'
 
-  complex(wp),intent(in) :: val
-  complex(wp) :: log10_c
+  complex(8),intent(in) :: val
+  complex(8) :: log10_c
 
-  log10_c = log(val)/log(10.0_wp)
+  log10_c = log(val)/log(10.0_8)
 
 end function log10_c
 end module MOD_COMPLEXIFY

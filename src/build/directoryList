@@ -1,1 +1,7 @@
 dirs:= \
+    ./\
+    math\
+    statistics\
+    adjoint/forward\
+    adjoint/reverse\
+    adjoint/ADFirstAidKit\

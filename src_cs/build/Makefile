@@ -6,7 +6,7 @@ FF90_ALL_FLAGS = $(FF90_FLAGS) $(CGNS_FLAGS)
 CC_ALL_FLAGS = $(CC_FLAGS)
 FPP_F90FLAGS = -x f95-cpp-input -fPIC
 
-PYTHON_MODN = f90wrap_pyf90_cs
+PYTHON_MODN = f90wrapTemplate_pyf90_cs
 #==============================================================================
 # Include Files
 #==============================================================================
@@ -94,7 +94,7 @@ _$(PYTHON_MODN).so: libsrc.a $(FPPFILES)
 	@echo
 	@echo "--------------- Compiling Complexified f90wrapTemplate Python --------------"
 	f90wrap -m $(PYTHON_MODN) $(wrap_files) --only $(wrap_subroutines) -k $(KIND_MAP) -P -v --py-max-line-length 120
-	f2py-f90wrap --fexec=$(FF90) --build-dir . -c -m _${PYTHON_MODN} -L. -lsrc f90wrap*.f90 $(INCLUDES) -lgfortran
+	f2py-f90wrap --f90exec=$(FF90) --build-dir . -c -m _${PYTHON_MODN} -L. -lsrc f90wrap*.f90 $(INCLUDES) -lgfortran
 	@echo "--------- Compiled Complexified f90wrapTemplate Python Successfully --------"
 	@echo
 

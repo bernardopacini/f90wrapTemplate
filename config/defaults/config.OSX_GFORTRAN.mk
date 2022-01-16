@@ -31,3 +31,6 @@ MAKEDEPEND = fortdepend
 
 # ----- Additional Includes ---------------------------------------------------
 INCLUDES= -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+
+# ----- Tapenade --------------------------------------------------------------
+tapenade = /path/to/tapenade

@@ -1,5 +1,14 @@
-fortranFiles= \
+fortranFiles=\
+        math/mod_math.f90\
+        statistics/mod_mean.f90\
+        statistics/mod_variance.f90\
+        adjoint/forward/mod_math_d.f90\
+        adjoint/forward/mod_mean_d.f90\
+        adjoint/forward/mod_variance_d.f90\
+        adjoint/reverse/mod_math_b.f90\
+        adjoint/reverse/mod_mean_b.f90\
+        adjoint/reverse/mod_variance_b.f90\
 
-cFiles = \
+cFiles = adjoint/ADFirstAidKit/adStack.c\
 
-f77Files = \
+f77Files = adjoint/ADFirstAidKit/adBuffer.f\
