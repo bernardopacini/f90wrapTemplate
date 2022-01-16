@@ -31,7 +31,7 @@ build/*
 *docs/doxygen/build/*
 
 # Wrapping Files
-*f90wrap*
+*f90wrap_mod*
 *.depend
 *.f2py_f2cmap
 

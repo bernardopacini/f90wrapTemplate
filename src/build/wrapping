@@ -13,14 +13,8 @@ wrap_files=\
 
 wrap_subroutines=\
   divide\
-  divide_d\
-  divide_b\
   add\
-  add_d\
-  add_b\
   subtract\
-  subtract_d\
-  subtract_b\
   \
   mean\
   mean_d\
