@@ -20,6 +20,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
+        sudo apt install build-essential
         python -m pip install --upgrade pip wheel
         pip3 install -r requirements.txt
 
@@ -28,6 +29,7 @@ jobs:
         cp config/defaults/config.Ubuntu_GFORTRAN.mk config/config.mk
         (cd src_cs && python3 complexify.py)
         make
+        pip3 install -e .
 
     - name: Test
       run: |
