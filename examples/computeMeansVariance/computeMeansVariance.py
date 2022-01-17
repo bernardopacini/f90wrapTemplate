@@ -2,7 +2,6 @@ import f90wrapTemplate.mean as f90wrapTemplate_mean
 import f90wrapTemplate.variance as f90wrapTemplate_variance
 
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 def main():
