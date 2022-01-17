@@ -4,7 +4,7 @@ import f90wrapTemplate.variance as py_variance
 import unittest
 import numpy as np
 import json
-
+import os
 
 class test_f90_derivatives_mean(unittest.TestCase):
     def setUp(self):
@@ -12,7 +12,8 @@ class test_f90_derivatives_mean(unittest.TestCase):
         self.n = 10
 
         # Import Data
-        with open("./test_random.json") as f:
+        dirScript = os.path.dirname(__file__)
+        with open(dirScript + "/test_random.json") as f:
             self.data = json.load(f)
 
     def tearDown(self):
