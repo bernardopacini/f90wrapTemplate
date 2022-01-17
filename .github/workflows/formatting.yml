@@ -24,7 +24,7 @@ jobs:
         pip3 install black
 
     - name: Run black Formatting Check
-      run: black -l 120 .
+      run: black --check --diff -l 120 .
 
   flake8:
     runs-on: ubuntu-latest
