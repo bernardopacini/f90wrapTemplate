@@ -94,7 +94,7 @@ _$(PYTHON_MODN).so: libsrc.a $(FPPFILES)
 	@echo
 	@echo "--------------------- Compiling f90wrapTemplate Python ---------------------"
 	f90wrap -m $(PYTHON_MODN) $(wrap_files) --only $(wrap_subroutines) -k $(KIND_MAP) -P -v --py-max-line-length 120
-	f2py-f90wrap --f90exec=$(FF90) --build-dir . -c -m _${PYTHON_MODN} -L. -lsrc f90wrap*.f90 $(INCLUDES) -lgfortran
+# f2py-f90wrap --f90exec=$(FF90) --build-dir . -c -m _${PYTHON_MODN} -L. -lsrc f90wrap*.f90 $(INCLUDES) -lgfortran
 	@echo "--------------- Compiled f90wrapTemplate Python Successfully ---------------"
 	@echo
 
