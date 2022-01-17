@@ -6,6 +6,6 @@ import numpy as np
 
 
 def mean(a):
-    b = np.zeros(1)
+    b = np.zeros(1, dtype=complex)
     f90_mean.mean(a, b)
-    return b
+    return b[0]

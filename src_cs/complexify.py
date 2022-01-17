@@ -56,7 +56,7 @@ re_type_start = re.compile(r"^\s*type\s*(?!\(.*\))\b", re.IGNORECASE)
 re_type_end = re.compile(r"^\s*end\s+type\b", re.IGNORECASE)
 
 # Variable Definition Patters
-re_real = re.compile(r"real(?=\(wp\))", re.IGNORECASE)
+re_real = re.compile(r"real(?=\(8\))", re.IGNORECASE)
 
 # Logical Patterns
 

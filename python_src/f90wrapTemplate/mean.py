@@ -10,18 +10,17 @@ import numpy as np
 def mean(a):
     b = np.zeros(1)
     f90_mean.mean(a, b)
-    return b
+    return b[0]
 
 
 def mean_d(a, ad):
     b = np.zeros(1)
     bd = np.zeros(1)
     f90_mean_d.mean_d(a, ad, b, bd)
-    return b, bd
+    return b[0], bd[0]
 
 
-def mean_b(a, bd):
-    b = np.zeros(1)
-    ad = np.zeros(1)
+def mean_b(a, b, bd):
+    ad = np.zeros(len(a))
     f90_mean_b.mean_b(a, ad, b, bd)
-    return b, ad
+    return ad

@@ -10,18 +10,17 @@ import numpy as np
 def variance(a):
     b = np.zeros(1)
     f90_variance.variance(a, b)
-    return b
+    return b[0]
 
 
 def variance_d(a, ad):
     b = np.zeros(1)
     bd = np.zeros(1)
     f90_variance_d.variance_d(a, ad, b, bd)
-    return b, bd
+    return b[0], bd[0]
 
 
-def variance_b(a, bd):
-    b = np.zeros(1)
-    ad = np.zeros(1)
+def variance_b(a, b, bd):
+    ad = np.zeros(len(a))
     f90_variance_b.variance_b(a, ad, b, bd)
-    return b, ad
+    return ad

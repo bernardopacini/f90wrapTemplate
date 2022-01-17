@@ -61,3 +61,4 @@ src/adjoint/tempReverse/*
 *.log
 *.synctex.gz
 *.tikz
+*.out
