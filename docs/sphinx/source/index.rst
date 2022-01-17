@@ -1,20 +1,28 @@
-.. f90wrap Template documentation master file, created by
-   sphinx-quickstart on Sun Jan 16 10:02:34 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to f90wrap Template's documentation!
-============================================
+f90wrapTemplate
+===============
 
 .. toctree::
+   :caption: Theory Manual
    :maxdepth: 2
-   :caption: Contents:
 
+   theoryManual/index
 
+.. toctree::
+   :caption: User Manual
+   :maxdepth: 2
 
-Indices and tables
-==================
+   userManual/index
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. toctree::
+   :caption: Examples
+   :maxdepth: 2
+
+   examples/index
+
+.. toctree::
+   :caption: Developer Documentation
+   :maxdepth: 2
+
+   developerDocs/index
+   developerDocs/indexPython
+   developerDocs/indexFortran

@@ -44,7 +44,7 @@ extensions = [
 bibtex_bibfiles = ["refs.bib"]
 
 autoapi_dirs = ["../../../python_src/f90wrapTemplate"]
-autoapi_root = "developer_docs/Python/autodoc/"
+autoapi_root = "developerDocs/Python/autodoc/"
 autoapi_add_toctree_entry = False
 
 # Add any paths that contain templates here, relative to this directory.
@@ -76,7 +76,13 @@ fortran_ext = ["f90", "F90", "f95", "F95"]
 # have an extension matching those define by the config variable `fortran_ext`
 # are used.
 src = "../../../src/"
-fortran_src = [os.path.abspath(os.path.join(this_dir, src + path)) for path in ("",)]
+fortran_src = [
+    os.path.abspath(os.path.join(this_dir, src + path))
+    for path in (
+        "math/",
+        "statistics/",
+    )
+]
 
 # Indentation string or length (default 4). If it is an integer,
 # indicates the number of spaces.

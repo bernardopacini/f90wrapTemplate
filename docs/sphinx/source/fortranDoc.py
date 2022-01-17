@@ -7,7 +7,7 @@ import shutil
 import re
 
 # Documentation Root Directory
-docPath = "./developer_docs/Fortran/"
+docPath = "./developerDocs/Fortran/"
 
 # Fortran Source Code Root Directory
 src = "../../../src/"
@@ -45,7 +45,8 @@ def generateDoc():
             dirRoot = docPath + re.sub(src, "", root)
 
             # Generate Directory
-            os.mkdir(dirRoot)
+            if dirName != "":
+                os.mkdir(dirRoot)
 
             # Generate Index File
             fIndex = open(dirRoot + "/" + "index.rst", "w")

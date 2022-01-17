@@ -25,7 +25,7 @@ build/*
 *docs/sphinx/source/_static/*
 *docs/sphinx/source/_templates/*
 *docs/sphinx/source/.vscode/*
-*docs/sphinx/source/developer_docs/Fortran*
+*docs/sphinx/source/developerDocs/Fortran*
 
 # Doxygen Documentation
 *docs/doxygen/build/*
