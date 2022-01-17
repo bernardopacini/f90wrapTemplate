@@ -29,5 +29,6 @@ jobs:
         make
 
     - name: Test
+      run: |
         cd tests
         testflo -v .
