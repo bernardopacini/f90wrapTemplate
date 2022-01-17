@@ -1,3 +1,6 @@
+[![Build & Test](https://github.com/bernardopacini/f90wrapTemplate/actions/workflows/buildtest.yml/badge.svg?branch=master)](https://github.com/bernardopacini/f90wrapTemplate/actions/workflows/buildtest.yml)
+[![Formatting](https://github.com/bernardopacini/f90wrapTemplate/actions/workflows/formatting.yml/badge.svg?branch=master)](https://github.com/bernardopacini/f90wrapTemplate/actions/workflows/formatting.yml)
+
 f90wrap Template
 ================
 
