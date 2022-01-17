@@ -26,6 +26,7 @@ jobs:
     - name: Build
       run: |
         cp config/defaults/config.Ubuntu_GFORTRAN.mk config/config.mk
+        (cd src_cs && python3 complexify.py)
         make
 
     - name: Test
