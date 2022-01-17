@@ -1,7 +1,6 @@
 import f90wrapTemplate.math as py_math
 
 import unittest
-import numpy as np
 
 
 class test_py_math(unittest.TestCase):

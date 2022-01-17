@@ -8,6 +8,7 @@ parser.add_argument("--mode", required=True, choices=["forward", "reverse"])
 parser.add_argument("--inputDir", required=True)
 parser.add_argument("--outputDir", required=True)
 
+
 def main():
     """
     This is the main function for automatically editing Tapenade generated
@@ -42,6 +43,7 @@ def main():
         # Write File
         writeFile(outputDir, fileName, lines)
 
+
 def readFile(path, fileName):
     """
     This function parses a file and stores the file's lines as a list.
@@ -69,6 +71,7 @@ def readFile(path, fileName):
 
     return lines
 
+
 def writeFile(path, fileName, lines):
     """
     This function outputs the rewritten code to the output directory
@@ -88,6 +91,7 @@ def writeFile(path, fileName, lines):
     file = open(path + fileName, "w")
     file.writelines(lines)
     file.close()
+
 
 def editFile(linesIn):
     """
@@ -113,6 +117,7 @@ def editFile(linesIn):
         iLine += 1
 
     return linesOut
+
 
 if __name__ == "__main__":
     main()
